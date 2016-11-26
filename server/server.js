@@ -10,7 +10,7 @@ var server = http.createServer(app);
 var io = socketIO(server);
 
 
-
+console.log('testing visual studio on mac');
 
 app.use(express.static(publicPath));
 
