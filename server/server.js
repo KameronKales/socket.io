@@ -9,7 +9,13 @@ var app = express();
 var server = http.createServer(app);
 var io = socketIO(server);
 
+
+
 app.use(express.static(publicPath));
+
+io.on('connection', (socket) => {
+    console.log(`A New User Connected from port ${port}`);
+})
 
 server.listen(port, () => {
     console.log(`Server is up on ${port}`);
