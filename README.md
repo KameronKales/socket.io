@@ -32,3 +32,9 @@ Replace express webserver with hapi.
 --------------------------------------------------------------------------
 
 *** Continue from 15:59 lec. 106 *** 
+
+--------------------------------------------------------------------------
+
+*** => vs function() ***
+
+The => is only supported in chrome browser. Anything which needs support for others must use the function() syntax.

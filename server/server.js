@@ -17,6 +17,9 @@ io.on('connection', (socket) => {
     console.log(`A New User Connected from port ${port}`);
 })
 
+io.on('disconnect', (socket) => {
+    console.log(`A New User Was Disconnnected from port ${port}`);
+});
 server.listen(port, () => {
     console.log(`Server is up on ${port}`);
 });
