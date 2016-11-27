@@ -16,6 +16,11 @@ app.use(express.static(publicPath));
 io.on('connection', (socket) => {
     console.log(`A New User Connected from port ${port}`);
 
+    socket.emit('newEmail', {
+        from: 'Kameron',
+        text: 'This is a test from socket.io emit!'
+    });
+
     socket.on('disconnect', () => {
         console.log(`A User Left From ${port}`);
     });

@@ -7,3 +7,8 @@
  socket.on('disconnect', function() {
      console.log('User disconnected from the server');
  });
+
+ socket.on('newEmail', function(email) {
+     console.log('newEmail', email);
+
+ });
