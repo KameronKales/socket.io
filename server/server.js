@@ -15,11 +15,13 @@ app.use(express.static(publicPath));
 
 io.on('connection', (socket) => {
     console.log(`A New User Connected from port ${port}`);
-})
 
-io.on('disconnect', (socket) => {
-    console.log(`A New User Was Disconnnected from port ${port}`);
+    socket.on('disconnect', () => {
+        console.log(`A User Left From ${port}`);
+    });
 });
+
+
 server.listen(port, () => {
     console.log(`Server is up on ${port}`);
 });
